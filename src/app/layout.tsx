@@ -24,9 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>
   );
 }
+
+// STATE: store
+// 1. onboarding step
+// 2. swipe index
+// 3. form: name & email
+
+// COMPONENTS
+// 4. onboarding container
+// 5. steps: home, get started (swipe), form name, form email & finish
