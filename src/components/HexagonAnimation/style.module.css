@@ -1,0 +1,28 @@
+.hexagonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hexagonContainer img {
+  transform: rotate(180deg);
+}
+
+.contentWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contentWrapper p {
+  color: var(--text-color);
+  font-size: 12px;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}

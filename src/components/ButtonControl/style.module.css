@@ -1,0 +1,9 @@
+.buttonContainer {
+  background-color: var(--color-dark-800);
+  border-radius: 50%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 13px;
+  cursor: pointer;
+}

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
+import Header from "@/components/Header";
+import HexagonAnimation from "@/components/HexagonAnimation";
+import styles from "./style.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className={`${styles.wrapper} container`}>
+          <Header />
+          <HexagonAnimation />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

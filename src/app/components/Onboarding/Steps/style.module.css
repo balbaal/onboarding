@@ -1,0 +1,83 @@
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex: 1;
+  padding-top: var(--spacing-lg);
+}
+
+.welcomeContainer h1 {
+  font-size: var(--fs-xl);
+  text-align: center;
+}
+
+.introductionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex: 1;
+  padding-top: var(--spacing-lg);
+}
+
+.introductionContainer p {
+  font-size: var(--fs-lg);
+  text-align: center;
+  color: var(--color-light-100);
+}
+
+.introductionContainer span {
+  color: var(--color-dark-600);
+}
+
+.swiperFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xl);
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex: 1;
+  padding-top: var(--spacing-lg);
+}
+
+.formContainer p {
+  font-size: var(--fs-md);
+  text-align: center;
+  color: var(--color-light-100);
+}
+
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex: 1;
+  padding-top: var(--spacing-lg);
+}
+
+.successContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.successContainer p {
+  font-size: var(--fs-md);
+  text-align: center;
+  color: var(--color-light-100);
+}
