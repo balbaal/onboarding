@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import Header from "@/components/Header";
-import HexagonAnimation from "@/components/HexagonAnimation";
-import styles from "./style.module.css";
+
+import LayoutClient from "./LayoutClient";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,21 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`${styles.wrapper} container`}>
-          <Header />
-          <HexagonAnimation />
-          {children}
-        </div>
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   );
 }
-
-// STATE: store
-// 1. onboarding step
-// 2. swipe index
-// 3. form: name & email
-
-// COMPONENTS
-// 4. onboarding container
-// 5. steps: home, get started (swipe), form name, form email & finish

@@ -3,16 +3,13 @@
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  transition: background 0.3s ease;
 }
 
-/* .gradient1 {
+.gradient1 {
   background: radial-gradient(94.55% 94.55% at 50% 5.45%, #222737 0%, #0c0d10 100%);
 }
 
 .gradient2 {
   background: radial-gradient(51.9% 51.9% at 50% 48.1%, #222737 0%, #0c0d10 100%);
 }
-
-.gradient3 {
-  background: radial-gradient(94.55% 94.55% at 50% 5.45%, #222737 0%, #0c0d10 100%);
-} */

@@ -16,7 +16,7 @@ interface OnboardingState {
   reset: () => void;
 }
 
-const useOnboardingStep = create<OnboardingState>((set) => ({
+export const useOnboardingStep = create<OnboardingState>((set) => ({
   onboardingStep: 1,
   setOnboardingStep: (step) => set({ onboardingStep: step }),
   swipeIndex: 0,
@@ -33,5 +33,3 @@ const useOnboardingStep = create<OnboardingState>((set) => ({
       email: "",
     }),
 }));
-
-export { useOnboardingStep };

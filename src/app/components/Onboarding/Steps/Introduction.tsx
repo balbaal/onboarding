@@ -7,14 +7,15 @@ import styles from "./style.module.css";
 import { Button } from "@/components/Button";
 import { SwipeIndex, useOnboardingStep } from "@/store/useOnboardingStep";
 import { useSwiper } from "@/store/useSwiper";
+import { useBackgroundChange } from "@/store/useBackgroundChange";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Introduction = () => {
-  const { setOnboardingStep, setSwipeIndex, swipeIndex } = useOnboardingStep();
+  const { setOnboardingStep, setSwipeIndex, swipeIndex, onboardingStep } = useOnboardingStep();
   const { setSwiper, slideNext, swiperInstance } = useSwiper();
-  const { onboardingStep } = useOnboardingStep();
+  const { setGradientType } = useBackgroundChange();
 
   const refSliderContent = useRef(null);
   const refButtonContinue = useRef<HTMLButtonElement>(null);
@@ -65,6 +66,15 @@ const Introduction = () => {
     if (swiperInstance) swiperInstance.slideTo(swipeIndex, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [swiperInstance]);
+
+  useEffect(() => {
+    if (swipeIndex === 0) {
+      setGradientType("gradient2");
+    } else {
+      setGradientType("gradient1");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [swipeIndex]);
 
   return (
     <div ref={refSliderContent} className={styles.introductionContainer}>

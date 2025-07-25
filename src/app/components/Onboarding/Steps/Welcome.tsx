@@ -5,14 +5,18 @@ import gsap from "gsap";
 import styles from "./style.module.css";
 import { Button } from "@/components/Button";
 import { useOnboardingStep } from "@/store/useOnboardingStep";
+import { useBackgroundChange } from "@/store/useBackgroundChange";
 
 const Welcome = () => {
   const { setOnboardingStep } = useOnboardingStep();
+  const { setGradientType } = useBackgroundChange();
   const refWelcomeText = React.useRef<HTMLDivElement>(null);
   const refButton = React.useRef<HTMLButtonElement>(null);
   const refButtonText = React.useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
+    setGradientType("gradient1");
+
     gsap.fromTo(
       refWelcomeText.current,
       {
@@ -30,6 +34,7 @@ const Welcome = () => {
     );
 
     gsap.fromTo(refButtonText.current, { x: 30 }, { x: 0 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

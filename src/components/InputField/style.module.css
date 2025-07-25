@@ -13,7 +13,7 @@
   padding: 8px 12px;
   border-radius: 16px;
   border: 1px solid var(--color-light-500);
-  background-color: var(--color-dark-900);
+  background-color: transparent;
 }
 
 .inputContainer.error {
