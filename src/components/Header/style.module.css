@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.headerContainer > img {
+  user-select: none;
+}
+
 .hidden {
   visibility: hidden;
 }

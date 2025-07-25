@@ -11,6 +11,7 @@ type InputFieldProps = {
   onChange: (value: string) => void;
   required?: boolean;
   onSubmit: () => void;
+  ref?: React.Ref<HTMLInputElement>;
 };
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -20,6 +21,7 @@ const InputField: React.FC<InputFieldProps> = ({
   onChange,
   required = false,
   onSubmit,
+  ref = null,
 }) => {
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
@@ -48,7 +50,7 @@ const InputField: React.FC<InputFieldProps> = ({
   }, [value, required, type]);
 
   return (
-    <div className={styles.inputWrapper}>
+    <div ref={ref} className={styles.inputWrapper}>
       <div className={`${styles.inputContainer} ${showError ? styles.error : ""}`}>
         <input
           type={type}

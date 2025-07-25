@@ -3,10 +3,13 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  user-select: none;
 }
 
-.hexagonContainer img {
-  transform: rotate(180deg);
+.hexagonFlatContainer {
+  width: 274px;
+  height: 290px;
+  user-select: none;
 }
 
 .contentWrapper {
@@ -18,9 +21,10 @@
 }
 
 .contentWrapper p {
-  color: var(--text-color);
-  font-size: 12px;
+  color: var(--color-light-300);
+  font-size: var(--fs-xs);
   position: absolute;
+  font-family: "Sohne", sans-serif;
 }
 
 .hide {

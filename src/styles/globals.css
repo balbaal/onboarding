@@ -1,7 +1,20 @@
 @import "./variables/index.module.css";
 
+@font-face {
+  font-family: "Bagoss";
+  src: url("/assets/fonts/bagoss-standard.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url("/assets/fonts/sohne-buch.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
-  font-family: var(--font-geist-mono);
   box-sizing: border-box;
   padding: 0;
   margin: 0;

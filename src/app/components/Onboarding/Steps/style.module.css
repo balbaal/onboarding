@@ -6,6 +6,7 @@
   gap: var(--spacing-md);
   flex: 1;
   padding-top: var(--spacing-lg);
+  font-family: "Bagoss", sans-serif;
 }
 
 .welcomeContainer h1 {
@@ -21,6 +22,8 @@
   gap: var(--spacing-md);
   flex: 1;
   padding-top: var(--spacing-lg);
+  user-select: none;
+  font-family: "Bagoss", sans-serif;
 }
 
 .introductionContainer p {
@@ -50,6 +53,7 @@
   gap: var(--spacing-md);
   flex: 1;
   padding-top: var(--spacing-lg);
+  font-family: "Bagoss", sans-serif;
 }
 
 .formContainer p {
@@ -66,6 +70,7 @@
   gap: var(--spacing-md);
   flex: 1;
   padding-top: var(--spacing-lg);
+  font-family: "Bagoss", sans-serif;
 }
 
 .successContent {
@@ -76,7 +81,7 @@
   gap: var(--spacing-lg);
 }
 
-.successContainer p {
+.successContent p {
   font-size: var(--fs-md);
   text-align: center;
   color: var(--color-light-100);

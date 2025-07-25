@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import SwiperDots from "@/app/components/SwiperDots";
 import styles from "./style.module.css";
 import { Button } from "@/components/Button";
@@ -12,12 +13,63 @@ import "swiper/css";
 
 const Introduction = () => {
   const { setOnboardingStep, setSwipeIndex, swipeIndex } = useOnboardingStep();
-  const { setSwiper, slideNext } = useSwiper();
+  const { setSwiper, slideNext, swiperInstance } = useSwiper();
+  const { onboardingStep } = useOnboardingStep();
+
+  const refSliderContent = useRef(null);
+  const refButtonContinue = useRef<HTMLButtonElement>(null);
+  const refButtonContinueText = useRef<HTMLParagraphElement>(null);
+  const refButtonStarted = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (onboardingStep === 2) {
+      gsap.to(refSliderContent.current, {
+        opacity: 1,
+        duration: 4,
+        ease: "power2.in",
+      });
+    } else {
+      gsap.to(refSliderContent.current, {
+        opacity: 0.5,
+        duration: 4,
+        ease: "power2.out",
+      });
+    }
+  }, [onboardingStep]);
+
+  useEffect(() => {
+    if (swipeIndex < 2) {
+      gsap.fromTo(
+        refButtonContinue.current,
+        {
+          opacity: 0,
+          duration: 0.1,
+        },
+        { opacity: 1, duration: 0.1 }
+      );
+
+      gsap.fromTo(
+        refButtonContinueText.current,
+        {
+          x: -30,
+        },
+        {
+          x: 0,
+        }
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (swiperInstance) swiperInstance.slideTo(swipeIndex, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [swiperInstance]);
 
   return (
-    <div className={styles.introductionContainer}>
+    <div ref={refSliderContent} className={styles.introductionContainer}>
       <Swiper
-        style={{ height: "fit-content", width: "100%" }}
+        style={{ height: "fit-content", width: "100%", marginTop: "-120px" }}
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={(swipeIndex) => setSwipeIndex(swipeIndex.activeIndex as SwipeIndex)}
@@ -50,9 +102,29 @@ const Introduction = () => {
         <SwiperDots totalSwiper={3} activeIndex={swipeIndex} />
 
         {swipeIndex === 2 ? (
-          <Button text="Get started" type="light" onClick={() => setOnboardingStep(3)} />
+          <Button
+            ref={refButtonStarted}
+            text="Get started"
+            type="light"
+            onClick={() =>
+              gsap.to(refButtonStarted.current, {
+                opacity: 0,
+                duration: 0.1,
+                onComplete: () => {
+                  setOnboardingStep(3);
+                },
+              })
+            }
+          />
         ) : (
-          <Button text="Continue" type="dark" onClick={() => slideNext()} />
+          <Button
+            ref={refButtonContinue}
+            text={<p ref={refButtonContinueText}>Continue</p>}
+            type="dark"
+            onClick={() => {
+              slideNext();
+            }}
+          />
         )}
       </div>
     </div>

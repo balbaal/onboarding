@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 4px;
   width: 100%;
+  font-family: "Sohne", sans-serif;
 }
 
 .inputContainer {

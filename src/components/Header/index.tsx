@@ -10,8 +10,7 @@ import ArrowLeftIcon from "@/assets/icons/arrow-left.svg";
 import RefreshIcon from "@/assets/icons/refresh.svg";
 
 const Header = () => {
-  const { setOnboardingStep, setSwipeIndex, swipeIndex, onboardingStep, reset } =
-    useOnboardingStep();
+  const { setOnboardingStep, setSwipeIndex, swipeIndex, onboardingStep } = useOnboardingStep();
   const { slidePrev } = useSwiper();
 
   const handleClickBack = () => {
@@ -27,7 +26,8 @@ const Header = () => {
   };
 
   const handleClickRefresh = () => {
-    reset();
+    // reset();
+    window.location.reload();
   };
 
   return (
