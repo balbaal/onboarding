@@ -4,7 +4,7 @@ import gsap from "gsap";
 import styles from "./style.module.css";
 
 import { useOnboardingStep } from "@/store/useOnboardingStep";
-import { isValidEmail } from "@/helper/utils";
+import { isValidEmail } from "@/lib/utils";
 
 const FormSecond = () => {
   const { email, setEmail, setOnboardingStep } = useOnboardingStep();

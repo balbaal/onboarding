@@ -33,7 +33,11 @@ const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={onboardingStep > 1 ? "" : styles.hidden}>
-        <ButtonControl onClick={handleClickBack} icon={<ArrowLeftIcon width={20} height={20} />} />
+        <ButtonControl
+          ariaLabel="prev button to back step"
+          onClick={handleClickBack}
+          icon={<ArrowLeftIcon width={20} height={20} />}
+        />
       </div>
       <Image
         src="/juicebox-logo-white.svg"
@@ -41,7 +45,11 @@ const Header = () => {
         width={123}
         height={29}
       />
-      <ButtonControl onClick={handleClickRefresh} icon={<RefreshIcon width={20} height={20} />} />
+      <ButtonControl
+        ariaLabel="refresh button for go back to first onboarding"
+        onClick={handleClickRefresh}
+        icon={<RefreshIcon width={20} height={20} />}
+      />
     </div>
   );
 };

@@ -8,6 +8,7 @@
   width: 100%;
   height: 60px;
   font-size: var(--fs-sm);
+  user-select: none;
 }
 
 .button p {

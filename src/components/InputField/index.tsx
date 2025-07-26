@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ArrowLeftIcon from "@/assets/icons/arrow-left.svg";
 import styles from "./style.module.css";
-import { isValidEmail } from "@/helper/utils";
+import { isValidEmail } from "@/lib/utils";
 
 type InputFieldProps = {
   type: "text" | "email";
@@ -59,7 +59,11 @@ const InputField: React.FC<InputFieldProps> = ({
           onChange={(e) => onChange(e.target.value)}
           className={styles.input}
         />
-        <div className={styles.suffixButton} onClick={handleClick}>
+        <div
+          aria-label="button to control on click field input (eg: submit trigger)"
+          className={styles.suffixButton}
+          onClick={handleClick}
+        >
           <ArrowLeftIcon width={18} height={18} />
         </div>
       </div>

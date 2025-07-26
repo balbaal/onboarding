@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useOnboardingStep } from "@/store/useOnboardingStep";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import jb2gLottie from "@/assets/animations/JB2G_Lottie.json";
-import { wait } from "@/helper/utils";
+import { wait } from "@/lib/utils";
 import style from "./style.module.css";
 
 const HexagonAnimation = () => {
@@ -102,6 +102,7 @@ const HexagonAnimation = () => {
         width={274}
         height={290}
         alt="hexagon image animation"
+        priority
       />
 
       <div style={{ position: "absolute", top: 0 }} ref={refHexagonFlat}>
