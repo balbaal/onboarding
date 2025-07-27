@@ -10,12 +10,12 @@ import RefreshIcon from "@/assets/icons/refresh.svg";
 
 import J from "@/assets/images/brand-character/j.svg";
 import U from "@/assets/images/brand-character/u.svg";
-import I from "@/assets/images/brand-character/I.svg";
-import C from "@/assets/images/brand-character/C.svg";
-import E from "@/assets/images/brand-character/E.svg";
-import B from "@/assets/images/brand-character/B.svg";
-import O from "@/assets/images/brand-character/O.svg";
-import X from "@/assets/images/brand-character/X.svg";
+import I from "@/assets/images/brand-character/i.svg";
+import C from "@/assets/images/brand-character/c.svg";
+import E from "@/assets/images/brand-character/e.svg";
+import B from "@/assets/images/brand-character/b.svg";
+import O from "@/assets/images/brand-character/o.svg";
+import X from "@/assets/images/brand-character/x.svg";
 
 const Header = () => {
   const { setOnboardingStep, setSwipeIndex, swipeIndex, onboardingStep } = useOnboardingStep();
