@@ -24,6 +24,7 @@ const config = [
       "no-unused-vars": "error",
       "react/react-in-jsx-scope": "off",
       "prettier/prettier": ["error"],
+      "import/no-unresolved": ["error", { caseSensitive: true }],
     },
   },
 ];
