@@ -12,3 +12,53 @@
 .hidden {
   visibility: hidden;
 }
+
+.BrandWrap {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.BrandWrap svg {
+  transition: transform 0.5s ease;
+}
+
+.BrandWrap .Char1 {
+  margin-top: -8px;
+}
+
+.BrandWrap .Char3 {
+  margin-top: -8px;
+}
+
+.BrandWrap .Char6 {
+  margin-top: -7px;
+}
+
+.BrandWrap:hover .Char2 {
+  transform: translateX(-100vw);
+}
+
+.BrandWrap:hover .Char3 {
+  transform: translateX(-100vw);
+}
+
+.BrandWrap:hover .Char4 {
+  transform: translateX(-100vw);
+}
+
+.BrandWrap:hover .Char5 {
+  transform: translateX(-100vw);
+}
+
+.BrandWrap:hover .Char6 {
+  transform: translateX(-65px);
+}
+
+.BrandWrap:hover .Char7 {
+  transform: translateX(-100vw);
+}
+
+.BrandWrap:hover .Char8 {
+  transform: translateX(-100vw);
+}
