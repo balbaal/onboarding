@@ -47,7 +47,7 @@ const Header = () => {
           icon={<ArrowLeftIcon width={20} height={20} />}
         />
       </div>
-      <div className={styles.BrandWrap}>
+      <div aria-label="juicebox animation brand logo" className={styles.BrandWrap}>
         <J className={styles.Char1} />
         <U className={styles.Char2} />
         <I className={styles.Char3} />

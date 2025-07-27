@@ -4,7 +4,7 @@ import { useOnboardingStep } from "@/store/useOnboardingStep";
 import gsap from "gsap";
 import { Button } from "@/components/Button";
 
-const Success = () => {
+const Result = () => {
   const { name } = useOnboardingStep();
 
   const refContentText = useRef<HTMLDivElement>(null);
@@ -49,4 +49,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default Result;

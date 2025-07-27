@@ -7,7 +7,7 @@ import { Button } from "@/components/Button";
 import { useOnboardingStep } from "@/store/useOnboardingStep";
 import { useBackgroundChange } from "@/store/useBackgroundChange";
 
-const Welcome = () => {
+const Homepage = () => {
   const { setOnboardingStep } = useOnboardingStep();
   const { setGradientType } = useBackgroundChange();
   const refWelcomeText = React.useRef<HTMLDivElement>(null);
@@ -61,4 +61,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Homepage;

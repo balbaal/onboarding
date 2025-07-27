@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import Welcome from "./Steps/Welcome";
-import { useOnboardingStep, StepNumber } from "@/store/useOnboardingStep";
-import Introduction from "./Steps/Introduction";
+import Homepage from "./Steps/Homepage";
+import Tutorial from "./Steps/Tutorial";
 import FormFirst from "./Steps/FormFirst";
 import FormSecond from "./Steps/FormSecond";
-import Success from "./Steps/Success";
+import Result from "./Steps/Result";
+import { useOnboardingStep, StepNumber } from "@/store/useOnboardingStep";
 
 const Onboarding = () => {
   const { onboardingStep } = useOnboardingStep();
@@ -17,11 +17,11 @@ const Onboarding = () => {
   };
 
   const steps: Steps = {
-    1: <Welcome />,
-    2: <Introduction />,
+    1: <Homepage />,
+    2: <Tutorial />,
     3: <FormFirst />,
     4: <FormSecond />,
-    5: <Success />,
+    5: <Result />,
   };
 
   return <>{steps[onboardingStep]}</>;

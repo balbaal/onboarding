@@ -12,7 +12,7 @@ import { useBackgroundChange } from "@/store/useBackgroundChange";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const Introduction = () => {
+const Tutorial = () => {
   const { setOnboardingStep, setSwipeIndex, swipeIndex, onboardingStep } = useOnboardingStep();
   const { setSwiper, slideNext, swiperInstance } = useSwiper();
   const { setGradientType } = useBackgroundChange();
@@ -141,4 +141,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default Tutorial;
