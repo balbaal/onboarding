@@ -8,8 +8,7 @@ Welcome to the **Juicebox Onboarding** project — a modern onboarding experienc
 
 ## 🎥 Preview
 
-<!-- ![Juicebox Onboarding Preview](https://onboarding-blush-mu.vercel.app/onboarding-preview.mp4) -->
-![Juicebox Onboarding Preview](./public/onboarding-preview.mp4)
+![Juicebox Onboarding Preview](https://onboarding-blush-mu.vercel.app/onboarding-preview.gif)
 
 ---
 
